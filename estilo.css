@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  
+
+  background-color: #111927;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+
+.logotipo {
+  cursor: pointer;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+
+  transition: background-color .3s;
+} a:hover {
+  color: #6184f7;
+}
+
+main > .container-80 {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+main > .container-80 > div {
+  width: 45%;
+}
+
+main > .container-80 > div > .texto {
+  text-align: right;
+}
+
+@media (max-width: 1000px) {
+
+  main > .container-80 > div > .texto {
+    text-align: center;
+  }
+
+  main > .container-80 {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  main > .container-80 > div {
+    width: 100%;
+  }
+  
+}
+
+.fieldset {
+  width: 100%;
+  min-width: 280px;
+  max-width: 400px;
+  padding: 3%;
+
+  margin: 0 auto;
+
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.alerta {
+  display: none;
+
+  background: #ff272725;
+  border: 1px solid #ff272750;
+  border-radius: 5px;
+  padding: 1% 2%;
+}
+
+.preencha {
+  display: none;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  background: #ff272775;
+  border: 1px solid #ff2727;
+  border-radius: 5px;
+  padding: 1% 2%;
+
+  position: fixed;
+  top: 2%;
+  right: 2%;
+
+  animation-name: ani-elementoFixed;
+  animation-duration: 5s;
+} 
+
+
+@media (max-width: 1000px) {
+  .preencha{
+    padding: 2%;
+  }
+}
+
+.preencha > .direita > .fi {
+  color: #ffffff50;
+  cursor: pointer;
+} .preencha > .direita > .fi:hover {
+  color: #ffffff;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+input, select, #botao {
+  font-family: 'Poppins', sans-serif;
+  color: #121212;
+  border: 1px solid #ffffff00;
+  border-radius: 5px;
+  outline: none;
+
+  width: 100%;
+  padding: 1% 0;
+} input:focus {
+  border: 1px solid #1041e4;
+}
+
+#botao {
+  padding: 2% 0;
+
+  background-color: #2254f8;
+  color: #ffffff;
+
+  transition: ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+} #botao:hover {
+  background-color: #1041e4;
+} #botao:disabled {
+  background-color: #2254f840;
+  cursor: default;
+}
+
+@keyframes ani-elementoFixed {
+  0% {right: 0%; opacity: 0;}
+  15% {right: 2%; opacity: 1;}
+  85% {right: 2%; opacity: 1;}
+  100% {right: 0%; opacity: 0;}
+}
+
+#mensagem {
+  width: 100%;
+  min-width: 280px;
+  max-width: 400px;
+  padding: 1% 2%;
+
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: #11192750;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  display: none;
+
+  align-items: flex-start;
+  justify-content: space-between;
+  
+  animation-name: ani-elementoFixed;
+  animation-duration: 5s;
+}
+
+@media (max-width: 1000px) {
+  #mensagem {
+    padding: 2%;
+  }
+}
+#mensagem > .esquerda {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+#mensagem > .direita > .fi:hover {
+  color: #2254f8;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar { 
+  width: .4rem; 
+} ::-webkit-scrollbar-track{
+  background-color: #2254f820;
+  border-radius: 10px;
+} ::-webkit-scrollbar-thumb{
+  background-color: #2254f870;
+  border-radius: 5px;
+}
+
+/* */
+
+.container-80 {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 420px) {
+  .container-sm, .container {
+    max-width: 400px;
+  }
+}
+@media (min-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
+}
+
+/* Margin */
+
+.mt-1 {
+  margin-top: .5rem !important;}
+.mt-2 {
+  margin-top: 1rem !important; }
+.mt-3 {
+  margin-top: 1.5rem !important; }
+.mt-4 {
+  margin-top: 2rem !important; }
+.mt-5 {
+  margin-top: 2.5rem !important; }
+.mt-6 {
+  margin-top: 3rem !important; }
+.mt-8 {
+  margin-top: 4rem !important; }
+    
+.mb-1 {
+  margin-bottom: .5rem !important; }
+.mb-2 {
+  margin-bottom: 1rem !important; }
+.mb-3 {
+  margin-bottom: 1.5rem !important; }
+.mb-4 {
+  margin-bottom: 2rem !important; }
+.mb-5 {
+  margin-bottom: 2.5rem !important; }
+.mb-6 {
+  margin-bottom: 3rem !important; }
+.mb-8 {
+  margin-bottom: 4rem !important; }
+    
+.mx-1 {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+.mx-2 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.mx-3 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.mx-4 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.mx-5 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+.mx-6 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.my-6 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Padding */
+
+.px-1 {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+.px-2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.px-3 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.px-4 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.px-5 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+.px-6 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+
+.py-3 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.py-6 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* gap */
+
+.gap-1 {
+  gap: .5rem; }
+.gap-2 {
+  gap: 1rem; }
+.gap-3 {
+  gap: 1.5rem; }
+.gap-4 {
+  gap: 2rem; }
+.gap-5 {
+  gap: 2.5rem; }
+.gap-6 {
+  gap: 3rem; }
+.gap-8 {
+  gap: 6rem; }
+
+/* Font size */
+.fs-detail  {
+  font-size: .75rem; }
+.fs-0 {
+  font-size: .89rem; }
+.fs-1 {
+  font-size: 1rem; }
+.fs-2 {
+  font-size: 1.25rem; }
+.fs-3 {
+  font-size: 1.5rem; }
+.fs-4 {
+  font-size: 2rem; }
+.fs-5 {
+  font-size: 2.5rem; }
+.fs-6 {
+  font-size: 3rem; }
+
+/* Font weight */
+
+.fw-lighter {
+  font-weight: 100; }
+.fw-light {
+  font-weight: 300; }
+.fw-normal {
+  font-weight: 400; }
+.fw-medium {
+  font-weight: 500; }
+.fw-bold {
+  font-weight: bold; }
+.fw-bolder {
+  font-weight: bolder; }
+
+/* Text align */
+
+.text-center {
+  text-align: center; }
+.text-left {
+  text-align: left; }
+.text-right {
+  text-align: right; }
+
+/* display flex */
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+/* Look, if you don't love me
+   so don't call me, don't make
+    me as the others have been 
+     made, cause my life is suffer.
+     because a thief woman, have nights
+     i wish drink poison.*/

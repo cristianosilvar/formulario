@@ -1,0 +1,12 @@
+div {
+    text-align: right;
+}
+div > p {
+    width: 70%;
+    margin: 0 0 0 auto;
+}
+@media (max-width: 700px) {
+    div {
+        text-align: center;
+    }
+}

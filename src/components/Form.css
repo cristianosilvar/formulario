@@ -1,0 +1,77 @@
+.fieldset {
+    background-color: var(--black-15);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    width: 30%;
+    margin: 0 auto;
+    padding: 3%;
+
+    border-radius: 1rem;
+    border: 1px solid var(--white-15);
+
+    text-align: left;
+}
+
+span {
+    font-weight: 600;
+}
+
+input, select, textarea {
+    font-family: 'Poppins', sans-serif;
+    
+    display: block;
+    width: 96%;
+    padding: .35rem 1.5%;
+    margin: .35rem 0 1rem 0;
+    border-radius: .4rem;
+
+    background-color: var(--white);
+    border: 1px solid var(--blue-15);
+
+} input:focus, select:focus, textarea:focus {
+    outline: none;
+    border: 1px solid var(--blue);
+
+    caret-color: var(--blue);
+} select {
+    width: 100%;
+
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url(../assets/icon-select-two.svg);
+    background-color: var(--white);
+    background-position: 98%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    padding: .35rem 2%;
+}
+
+
+.button_reset {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: .85rem;
+    color: var(--white);
+    padding: 0;
+
+    opacity: .8;
+    cursor: pointer;
+    transition: all .2s;
+
+    background-color: #ffffff00;
+    border: none;
+} .button_reset:hover {
+    color: var(--red);
+}
+
+.button_submit {
+    width: 100%;
+    background-color: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+    border: 1px solid var(--white-15);
+} .button_submit:hover {
+    border: 1px solid var(--white-50);
+}

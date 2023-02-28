@@ -1,0 +1,10 @@
+main {
+    margin: 3% 0;
+}
+section {
+    display: flex;
+    gap: 5%;
+} section > * {
+    width: 50%;
+    min-width: 350px;
+}
